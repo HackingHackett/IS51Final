@@ -1,9 +1,23 @@
-"""In the main function I open the Final.txt file and then I get all the values on each line
-which are the grades and put them into a list. They are all strings so i iterate through 
-the list convert the individual grades in strings to integers and put them into another filke.
-Then I add up the numbers in integers list to get the overall sum and divide by the length of the list
-to get the average grade.
+function main():
+	f -> open(final.txt,read)
+	f -> split('\n')
+	intNums -> []
+	for i -> f:
+		intNums -> append(i)
+	count -> len(intNums)
+	finalSum -> 0
+	for i -> f:
+		finalSum -> +1
+	avg -> finalSum/count
+	print 'Number of Grades', count
+	print 'Average Grade', avg
+	calculate_percent_above_average(avg,intNums)
 
-In the calculate_percent_above_average I take the average and the list of integers and I do comparisons 
-to find out the total number of people with above average grades and divide that as a percentage of the total 
-number of grades and round to find the number of people with above average grades."""
+function calculate_percent_above_average(x,lst):
+	tmp -> 0
+	for i -> lst:
+		if i greater than x :
+			tmp -> +1
+	print 'Percentage above average is,' , round up tmp/lenth of lst * 100
+
+    
